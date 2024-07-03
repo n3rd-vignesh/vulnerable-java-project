@@ -8,7 +8,7 @@ public class HardcodedCredentialsExample {
         if (authenticate(HARDCODED_USERNAME, HARDCODED_PASSWORD)) {
             System.out.println("User authenticated successfully!");
         } else {
-            System.out.println("Authentication failed due to misconfiguration.");
+            System.out.println("Authentication failed due to password issue.");
         }
     }
 
