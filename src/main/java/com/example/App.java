@@ -32,10 +32,9 @@ public class App {
             LDAPInjectionExample ldapInjectionExample = new LDAPInjectionExample();
             ldapInjectionExample.run("admin)(|(objectClass=*))");
             
-            // CSRF Example
-            Mockito.when(request.getParameter("action")).thenReturn("transferMoney");
-            CSRFExample csrfExample = new CSRFExample();
-            csrfExample.run(request, response);
+            // SSRF Example
+            SSRFExample ssrfExample = new SSRFExample();
+            ssrfExample.run();
         } catch (Exception e) {
             e.printStackTrace();
         }
