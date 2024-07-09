@@ -9,7 +9,6 @@ public class CSRFExample {
         String action = request.getParameter("action");
 
         if ("transferMoney".equals(action)) {
-            // Perform money transfer
             System.out.println("Money transferred!");
         }
     }
