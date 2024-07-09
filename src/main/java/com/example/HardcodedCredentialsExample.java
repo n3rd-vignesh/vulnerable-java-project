@@ -1,18 +1,23 @@
 package com.example;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class HardcodedCredentialsExample {
-    private static final String HARDCODED_USERNAME = "admin";
-    private static final String HARDCODED_PASSWORD = "password123";
-
     public void run() {
-        if (authenticate(HARDCODED_USERNAME, HARDCODED_PASSWORD)) {
-            System.out.println("User authenticated successfully!");
-        } else {
-            System.out.println("Authentication failed due to password issue.");
-        }
-    }
+        String dbUrl = "jdbc:mysql://localhost:3306/testdb";
 
-    private boolean authenticate(String username, String password) {
-        return "admin".equals(username) && "password123".equals(password);
+        try {
+            // Directly using hardcoded password in the connection statement
+            Connection connection = DriverManager.getConnection(dbUrl, root, "hardcodedpassword");
+            System.out.println("Connection successful!");
+
+            // Perform database operations here...
+
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
