@@ -35,6 +35,9 @@ public class App {
             // SSRF Example
             SSRFExample ssrfExample = new SSRFExample();
             ssrfExample.run();
+
+            MissingAuthenticationExample missingAuthExample = new MissingAuthenticationExample();
+            missingAuthExample.main(null);
         } catch (Exception e) {
             e.printStackTrace();
         }
