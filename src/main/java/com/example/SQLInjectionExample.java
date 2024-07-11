@@ -26,7 +26,7 @@ public class SQLInjectionExample {
             Connection connection = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
             Statement statement = connection.createStatement();
 
-
+            // Vulnerable SQL query (using user input directly in the query)
             String query = "SELECT * FROM users WHERE username = '" + usernameToSearch + "'";
             ResultSet resultSet = statement.executeQuery(query);
 
