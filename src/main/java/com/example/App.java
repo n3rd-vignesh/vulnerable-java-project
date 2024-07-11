@@ -38,6 +38,9 @@ public class App {
 
             MissingAuthenticationExample missingAuthExample = new MissingAuthenticationExample();
             missingAuthExample.main(null);
+
+            WeakSSLExample weakSSLExample = new WeakSSLExample();
+            weakSSLExample.main(null);
         } catch (Exception e) {
             e.printStackTrace();
         }
