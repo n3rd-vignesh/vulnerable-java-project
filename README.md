@@ -1,1 +1,1 @@
-Integration Testing
+Integration Testing with pipeline testing
